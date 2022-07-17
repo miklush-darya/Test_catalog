@@ -1,0 +1,12 @@
+{% extends 'catalog/base.html' %}
+ 
+{% block content %}
+    <h2>{{title}}</h2>
+    
+    {% if product.photo %}
+        <p><img class="'img-article-left" src="{{product.photo.url}}"></p>
+    {% endif %}
+
+    {{product.content|linebreaks}}
+
+{% endblock %}

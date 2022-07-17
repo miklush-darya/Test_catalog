@@ -34,11 +34,11 @@
                 <!-- Sidebar слева -->
                     <td valign="top">
                         <!-- <ul> -->
-                            {% if categ_selected == 0 %}
-                                <li class="selected">Все категории</li>
-                            {% else %}
-                                <li><a href="{% url 'home' %}">Все категории</a></li>
-                            {% endif %}
+                        {% if categ_selected == 0 %}
+                            <li class="selected">Все категории</li>
+                        {% else %}
+                            <li><a href="{% url 'home' %}">Все категории</a></li>
+                        {% endif %}
                         <!-- </ul> -->
 
                         {% for c in categs %}

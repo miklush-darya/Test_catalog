@@ -1,7 +1,7 @@
 {% extends 'catalog/base.html' %}
  
 {% block content %}
-    <h2>{{title}}</h2>
+    <!-- <h2>{{title}}</h2> -->
     
     <ul>
         {% for p in product %}
@@ -9,8 +9,12 @@
             <h4>{{p.title}}</h4>
             {% autoescape on %}
                 {{p.content|truncatewords:10}}
-                <p>В корзину</p>
+                <button type='submit'>В корзину</button>
+                <!-- <p>В корзину</p> -->
                 <!-- <p>Просмотр</p> -->
+                {% if p.photo %}
+                    <p><img class="img-article-left thumb" scr="{{p.photo.url}}"></p>
+                {% endif %}
             {% endautoescape %}
         </li>
         {% endfor %}
